@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+<h4>Url: <%= @user.avatar.url %></h4><br>
+<h4>Path: <%= @user.avatar.path %></h4><br>
+<h4>Style: Original</h4><br>
+<%= image_tag( @user.avatar.url) %> <br>
+<h4> Style: Large </h4><br>
+<%= image_tag( @user.avatar.url(:large)) %>
+<h4> Style: Medium </h4><br>
+<%= image_tag( @user.avatar.url(:medium)) %>
+<h4> Style: Small </h4><br>
+<%= image_tag( @user.avatar.url(:small)) %>
+<h4> Style: Thumb </h4><br>
+<%= image_tag( @user.avatar.url(:thumb)) %> <br>
+<%= link_to 'Edit', edit_user_path(@user) %> <br>
+<%= link_to 'Back', users_path %>
